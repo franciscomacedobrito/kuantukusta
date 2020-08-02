@@ -1,0 +1,32 @@
+.product-list {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 992px) {
+  app-product-card {
+    flex-basis: 25%;
+    min-width: 25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  app-product-card {
+    flex-basis: 50%;
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  app-product-card {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+  .product-list {
+    padding: 0;
+  }
+}

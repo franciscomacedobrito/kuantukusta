@@ -1,0 +1,17 @@
+<div class="modal-wrapper" (click)="handleBackDropClicked()">
+  <div class="modal-body">
+    <div class="title">
+      Produto adicionado ao carrinho!
+    </div>
+    <div class="product-info">
+      <div class="product-info--image"
+           [ngStyle]="{background: ' url(' +  bagItem.product.photo  + ') no-repeat center'}">
+        <div class="product-info--image--quantity">x{{bagItem.quantity}}</div>
+      </div>
+      <div class="product-info--name">{{bagItem.product.name}}</div>
+    </div>
+    <button class="app-btn--accept" (click)="handleConfirmButtonClicked()" #confirmButton>
+      OK
+    </button>
+  </div>
+</div>

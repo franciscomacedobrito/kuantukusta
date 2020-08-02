@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*:focus {
+  outline: none;
+}
+
+$app-green: #6fcc94;
+$top-bar-height: 50px;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+app-modal {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.23);
+}
+
+.app-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all ease-out 0.1s;
+  height: 30px;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--accept {
+    @extend .app-btn;
+    background: $app-green;
+    border-radius: 20px;
+    color: white;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="card-wrapper" [ngClass]="{added: isInCart}">
+  <div class="image-section">
+    <div [ngStyle]="{background: ' url(' +  product.photo  + ') no-repeat center'}" class="product-image"></div>
+  </div>
+  <div class="bottom-section">
+    <div class="info-section">
+      <div class="card-title">
+        {{product.name}}
+      </div>
+      <div class="card-info">
+        {{product.price | currency}}
+      </div>
+    </div>
+    <div class="action-section">
+      <button class="app-btn--accept" (click)="addToCart()">+</button>
+    </div>
+  </div>
+</div>

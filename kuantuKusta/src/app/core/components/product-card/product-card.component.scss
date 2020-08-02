@@ -1,0 +1,65 @@
+@import '../../../../styles';
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 15px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+  background: white;
+
+  .image-section {
+    flex: 3;
+
+    .product-image {
+      height: 175px;
+      background-size: cover;
+    }
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 8px 15px;
+    position: relative;
+
+    .info-section {
+      flex: 6;
+      color: #b1b1b1;
+
+      .card-title {
+        color: #525252;
+        font-weight: bold;
+        white-space: nowrap;
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .action-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      .app-btn--accept {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.added {
+  border: solid 1px $app-green;
+  box-sizing: border-box;
+}

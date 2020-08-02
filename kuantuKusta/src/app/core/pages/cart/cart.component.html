@@ -1,0 +1,17 @@
+<div class="cart">
+  <div class="cart--title">
+    Carrinho de compras:
+  </div>
+  <div *ngIf="!bagItems.length" class="cart--empty">
+    Carrinho vazio !
+  </div>
+  <div class="cart--items">
+    <div class="cart--items--bag-item" *ngFor="let bagItem of bagItems">
+      <div class="cart--items--bag-item--quantity">{{bagItem.quantity}}x </div>
+      <div class="cart--items--bag-item--image" [ngStyle]="{background: ' url(' +  bagItem.product.photo  + ') no-repeat center'}">
+      </div>
+      <div class="cart--items--bag-item--name">{{bagItem.product.name}}</div>
+      <div class="cart--items--bag-item--total">{{bagItem.quantity * bagItem.product.price | currency}}</div>
+    </div>
+  </div>
+</div>

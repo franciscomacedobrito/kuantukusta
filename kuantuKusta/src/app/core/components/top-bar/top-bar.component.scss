@@ -1,0 +1,57 @@
+@import '../../../../styles';
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  height: $top-bar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 37px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background: white;
+
+  .store-wrapper {
+    display: flex;
+    align-items: center;
+
+    .store-logo-icon {
+      height: 30px;
+      width: 30px;
+    }
+
+    .store-title {
+      font-size: 19px;
+      margin-left: 15px;
+    }
+  }
+
+  .actions-wrapper {
+    display: flex;
+
+    .bag-wrapper {
+      position: relative;
+      cursor: pointer;
+      .bag-icon {
+        height: 30px;
+        width: 30px;
+      }
+
+      .bag-wrapper--quantity {
+        position: absolute;
+        background: black;
+        color: white;
+        border: solid white 2px;
+        bottom: 2px;
+        right: -3px;
+        border-radius: 50%;
+        width: 15px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+      }
+    }
+  }
+}
